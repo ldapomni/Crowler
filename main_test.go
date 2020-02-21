@@ -64,13 +64,14 @@ func TestCrowler(t *testing.T) {
 		{
 			"URL 1",
 			"https://gobyexample.com/hello-world",
-			17,
+			3,
 		},
 		{
 			"URL 2",
 			"https://gobyexample.ru/string-functions.html",
-			24,
+			3,
 		},
+
 		{
 			"url 3 error",
 			"http://werwer.erer",
