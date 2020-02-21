@@ -16,11 +16,8 @@ import (
 //CGoRoutinDefault default gouroutin count
 const CGoRoutinDefault int = 5
 
-//CCrowlerTimeOut two second timeout
+//CCrowlerTimeOut one second timeout
 const CCrowlerTimeOut int = 1
-
-//total number of go word
-var total int = 0
 
 //GetParamGoroutine from cmd with flag -g
 func GetParamGoroutine() int {
@@ -72,6 +69,7 @@ func WorkCrowler(i int, count *int64, cmdChan chan string, wg *sync.WaitGroup) {
 
 func main() {
 
+	//total number of go word
 	var TotalGo int64 = 0
 	var startGoNum int = 0
 
