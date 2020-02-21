@@ -80,7 +80,7 @@ func main() {
 
 	//mutex := new(sync.Mutex)
 	cmdChan := make(chan string)
-	resChan := make(chan int)
+	//resChan := make(chan int)
 	wg := new(sync.WaitGroup)
 	for scanner.Scan() {
 		if startGoNum < goRoutinCount { //Run max goRoutinCount
@@ -110,7 +110,7 @@ func main() {
 	}
 	fmt.Println("end")
 	close(cmdChan)
-	close(resChan)
+	//	close(resChan)
 	wg.Wait()
 
 	fmt.Println("End, total word 'Go' count:", TotalGo)
